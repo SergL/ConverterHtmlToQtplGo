@@ -1,0 +1,780 @@
+/* source file: /home/serg/work/site/uvoteam-test/htdocs/../../travel/prototype/Travel_Axure/individual_enterpreneur.html<br>
+{% func (Data *DataHtml) Individual_enterpreneur() %}
+<div id="base" class="">
+
+      <!-- type (1-3) (Dynamic Panel) -->
+      <div id="u4069" class="ax_default" data-label="type (1-3)">
+        <div id="u4069_state0" class="panel_state" data-label="State1">
+          <div id="u4069_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (Group) -->
+            <div id="u4070" class="ax_default" data-width="394" data-height="41">
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u4071" class="ax_default box_1">
+                <div id="u4071_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u4072" class="text">
+                  <p><span>ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Image) -->
+            <div id="u4073" class="ax_default image">
+              <img id="u4073_img" class="img " src="images/physical_person/u1470.png"/>
+              <!-- Unnamed () -->
+              <div id="u4074" class="text" style="display:none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Hot Spot) -->
+            <div id="u4075" class="ax_default">
+            </div>
+          </div>
+        </div>
+        <div id="u4069_state1" class="panel_state" data-label="State2" style="display:none; visibility: hidden;">
+          <div id="u4069_state1_content" class="panel_state_content">
+
+            <!-- Unnamed (Group) -->
+            <div id="u4076" class="ax_default" data-width="394" data-height="41">
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u4077" class="ax_default box_1">
+                <div id="u4077_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u4078" class="text">
+                  <p><span>ВЫБЕРИТЕ ОРГАНИЗАЦИОННО-ПРАВОВУЮ ФОРМУ</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Group) -->
+            <div id="u4079" class="ax_default" data-width="394" data-height="121">
+
+              <!-- Unnamed (Group) -->
+              <div id="u4080" class="ax_default" data-width="394" data-height="121">
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u4081" class="ax_default box_1">
+                  <div id="u4081_div" class=""></div>
+                  <!-- Unnamed () -->
+                  <div id="u4082" class="text">
+                    <p><span>ИНДИВИДУАЛЬНЫЙ ПРЕДПРЕНИМАТЕЛЬ</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u4083" class="ax_default box_1">
+                  <div id="u4083_div" class=""></div>
+                  <!-- Unnamed () -->
+                  <div id="u4084" class="text">
+                    <p><span>ЮРИДИЧЕСКОЕ ЛИЦО</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u4085" class="ax_default box_1">
+                  <div id="u4085_div" class=""></div>
+                  <!-- Unnamed () -->
+                  <div id="u4086" class="text">
+                    <p><span>ФИЗИЧЕСКОЕ ЛИЦО</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Unnamed (Horizontal Line) -->
+              <div id="u4087" class="ax_default line">
+                <img id="u4087_img" class="img " src="images/physical_person/u1484.png"/>
+                <!-- Unnamed () -->
+                <div id="u4088" class="text" style="display:none; visibility: hidden">
+                  <p><span></span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Vertical Line) -->
+              <div id="u4089" class="ax_default line">
+                <img id="u4089_img" class="img " src="images/physical_person/u1486.png"/>
+                <!-- Unnamed () -->
+                <div id="u4090" class="text" style="display:none; visibility: hidden">
+                  <p><span></span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Vertical Line) -->
+              <div id="u4091" class="ax_default line">
+                <img id="u4091_img" class="img " src="images/physical_person/u1486.png"/>
+                <!-- Unnamed () -->
+                <div id="u4092" class="text" style="display:none; visibility: hidden">
+                  <p><span></span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Horizontal Line) -->
+              <div id="u4093" class="ax_default line">
+                <img id="u4093_img" class="img " src="images/physical_person/u1484.png"/>
+                <!-- Unnamed () -->
+                <div id="u4094" class="text" style="display:none; visibility: hidden">
+                  <p><span></span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Image) -->
+            <div id="u4095" class="ax_default image">
+              <img id="u4095_img" class="img " src="images/physical_person/u1470.png"/>
+              <!-- Unnamed () -->
+              <div id="u4096" class="text" style="display:none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Hot Spot) -->
+            <div id="u4097" class="ax_default">
+            </div>
+
+            <!-- Unnamed (Hot Spot) -->
+            <div id="u4098" class="ax_default">
+            </div>
+
+            <!-- Unnamed (Hot Spot) -->
+            <div id="u4099" class="ax_default">
+            </div>
+
+            <!-- Unnamed (Hot Spot) -->
+            <div id="u4100" class="ax_default">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4101" class="ax_default heading_2">
+        <div id="u4101_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4102" class="text">
+          <p><span>РЕГИСТРАЦИЯ ПАРТНЕРА НА СЕРВИСЕ (ШАГ 2)</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Checkbox) -->
+      <div id="u4103" class="ax_default checkbox">
+        <label for="u4103_input">
+          <!-- Unnamed () -->
+          <div id="u4104" class="text">
+            <p><span>Я подтверждаю, что моя компания является законным бизнесом, имеющим все необходимые для деятельности лицензии и разрешения. Также подтверждаю, что данные лицензии будут предъявлены компанией по первому требованию сервиса</span></p>
+          </div>
+        </label>
+        
+ <input  id="u4103_input" type="checkbox" value="{%s Data.Checkboxs[0].Val %}" name="{%s Data.Checkboxs[0].Name %}" />
+ 
+      </div>
+
+      <!-- Disabled (Rectangle) -->
+      <div id="u4105" class="ax_default primary_button disabled" data-label="Disabled">
+        <div id="u4105_div" class="disabled"></div>
+        <!-- Unnamed () -->
+        <div id="u4106" class="text">
+          <p><span>СГЕНЕРИРОВАТЬ ДОГОВОР</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Footer_lp_web) -->
+
+      <!-- white panel (Dynamic Panel) -->
+      <div id="u4108" class="ax_default" data-label="white panel">
+        <div id="u4108_state0" class="panel_state" data-label="State1">
+          <div id="u4108_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u4109" class="ax_default box_1">
+              <img id="u4109_img" class="img " src="images/note__renegotiate_/u2.png"/>
+              <!-- Unnamed () -->
+              <div id="u4110" class="text" style="display:none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer (Dynamic Panel) -->
+      <div id="u4111" class="ax_default" data-label="footer">
+        <div id="u4111_state0" class="panel_state" data-label="State1">
+          <div id="u4111_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (Image) -->
+            <div id="u4112" class="ax_default image">
+              <img id="u4112_img" class="img " src="images/note__renegotiate_/u5.png"/>
+              <!-- Unnamed () -->
+              <div id="u4113" class="text" style="display:none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u4114" class="ax_default label">
+              <div id="u4114_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u4115" class="text">
+                <p><span style="color:#949494;">©&nbsp; 2016</span><span>&nbsp; 82RU.RU.</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u4116" class="ax_default box_1">
+              <div id="u4116_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u4117" class="text" style="display:none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u4118" class="ax_default label">
+              <div id="u4118_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u4119" class="text">
+                <p><span>ПОДПИСКА</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Vertical Line) -->
+            <div id="u4120" class="ax_default line">
+              <img id="u4120_img" class="img " src="images/note__renegotiate_/u13.png"/>
+              <!-- Unnamed () -->
+              <div id="u4121" class="text" style="display:none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u4122" class="ax_default box_1">
+              <div id="u4122_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u4123" class="text" style="display:none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u4124" class="ax_default label">
+              <div id="u4124_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u4125" class="text">
+                <p><span>EMAIL</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Image) -->
+            <div id="u4126" class="ax_default image">
+              <img id="u4126_img" class="img " src="images/note__renegotiate_/u19.png"/>
+              <!-- Unnamed () -->
+              <div id="u4127" class="text" style="display:none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Image) -->
+            <div id="u4128" class="ax_default image">
+              <img id="u4128_img" class="img " src="images/note__renegotiate_/u21.png"/>
+              <!-- Unnamed () -->
+              <div id="u4129" class="text" style="display:none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u4130" class="ax_default box_1">
+              <div id="u4130_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u4131" class="text" style="display:none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (Header) -->
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4133" class="ax_default box_1">
+        <div id="u4133_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4134" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4135" class="ax_default label">
+        <div id="u4135_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4136" class="text">
+          <p><span>ПОИСК ПРЕДЛОЖЕНИЙ&nbsp; +</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4137" class="ax_default label">
+        <div id="u4137_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4138" class="text">
+          <p><span>ГОРЯЧИЕ ПУТЕВКИ +</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4139" class="ax_default label">
+        <div id="u4139_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4140" class="text">
+          <p><span>ГЛАВНАЯ +</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4141" class="ax_default label">
+        <div id="u4141_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4142" class="text">
+          <p><span>ОТЗЫВЫ +</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4143" class="ax_default label">
+        <div id="u4143_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4144" class="text">
+          <p><span>ДЛЯ ПАРТНЕРОВ +</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4145" class="ax_default label">
+        <div id="u4145_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4146" class="text">
+          <p><span>РЕГИСТРАЦИЯ / ВХОД</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4147" class="ax_default label">
+        <div id="u4147_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4148" class="text">
+          <p><span>НОВОСТИ +</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4149" class="ax_default label">
+        <div id="u4149_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4150" class="text">
+          <p><span>ПУТЕВОДИТЕЛЬ +</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4151" class="ax_default label">
+        <div id="u4151_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4152" class="text">
+          <p><span>ОТЕЛИ +</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4153" class="ax_default label">
+        <div id="u4153_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4154" class="text">
+          <p><span>АВИА +</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4155" class="ax_default label">
+        <div id="u4155_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4156" class="text">
+          <p><span>О НАС +</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Image) -->
+      <div id="u4157" class="ax_default image">
+        <img id="u4157_img" class="img " src="images/note__renegotiate_/u50.png"/>
+        <!-- Unnamed () -->
+        <div id="u4158" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Hot Spot) -->
+      <div id="u4159" class="ax_default">
+      </div>
+
+      <!-- Unnamed (Hot Spot) -->
+      <div id="u4160" class="ax_default">
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4161" class="ax_default box_1">
+        <div id="u4161_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4162" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4163" class="ax_default box_1">
+        <div id="u4163_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4164" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4165" class="ax_default box_1">
+        <div id="u4165_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4166" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4167" class="ax_default box_1">
+        <div id="u4167_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4168" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4169" class="ax_default box_1">
+        <div id="u4169_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4170" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4171" class="ax_default box_1">
+        <div id="u4171_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4172" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4173" class="ax_default box_1">
+        <div id="u4173_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4174" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4175" class="ax_default box_1">
+        <div id="u4175_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4176" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Text Field) -->
+      <div id="u4177" class="ax_default text_field" title="Введите адрес регистрации Вашей организации">
+        
+ <input  id="u4177_input" type="text" value="{%s Data.Inputs[0].Val %}" title="{%s Data.Inputs[0].Title%}" name="{%s Data.Inputs[0].Nameinput %}" placeholder="{%s Data.Inputs[0].Title%}" />
+ 
+      </div>
+
+      <!-- Unnamed (Text Field) -->
+      <div id="u4178" class="ax_default text_field" title="Введите Ваш Основной государственный регистрационный номер индивидуального предпринимателя">
+        
+ <input  id="u4178_input" type="text" value="{%s Data.Inputs[1].Val %}" title="{%s Data.Inputs[1].Title%}" name="{%s Data.Inputs[1].Nameinput %}" placeholder="{%s Data.Inputs[1].Title%}" />
+ 
+      </div>
+
+      <!-- Unnamed (Text Field) -->
+      <div id="u4179" class="ax_default text_field" title="Введите Идентификационный код банка">
+        
+ <input  id="u4179_input" type="text" value="{%s Data.Inputs[2].Val %}" title="{%s Data.Inputs[2].Title%}" name="{%s Data.Inputs[2].Nameinput %}" placeholder="{%s Data.Inputs[2].Title%}" />
+ 
+      </div>
+
+      <!-- Unnamed (Text Field) -->
+      <div id="u4180" class="ax_default text_field" title="Введите название банка">
+        
+ <input  id="u4180_input" type="text" value="{%s Data.Inputs[3].Val %}" title="{%s Data.Inputs[3].Title%}" name="{%s Data.Inputs[3].Nameinput %}" placeholder="{%s Data.Inputs[3].Title%}" />
+ 
+      </div>
+
+      <!-- Unnamed (Text Field) -->
+      <div id="u4181" class="ax_default text_field" title="Введите номер расчетного счета банка">
+        
+ <input  id="u4181_input" type="text" value="{%s Data.Inputs[4].Val %}" title="{%s Data.Inputs[4].Title%}" name="{%s Data.Inputs[4].Nameinput %}" placeholder="{%s Data.Inputs[4].Title%}" />
+ 
+      </div>
+
+      <!-- Unnamed (Text Field) -->
+      <div id="u4182" class="ax_default text_field" title="Введите номер корреспондирующего счета в банке">
+        
+ <input  id="u4182_input" type="text" value="{%s Data.Inputs[5].Val %}" title="{%s Data.Inputs[5].Title%}" name="{%s Data.Inputs[5].Nameinput %}" placeholder="{%s Data.Inputs[5].Title%}" />
+ 
+      </div>
+
+      <!-- Unnamed (Text Field) -->
+      <div id="u4183" class="ax_default text_field" title="Введите название валюты">
+        
+ <input  id="u4183_input" type="text" value="{%s Data.Inputs[6].Val %}" title="{%s Data.Inputs[6].Title%}" name="{%s Data.Inputs[6].Nameinput %}" placeholder="{%s Data.Inputs[6].Title%}" />
+ 
+      </div>
+
+      <!-- Unnamed (Text Field) -->
+      <div id="u4184" class="ax_default text_field" title="Введите страну банка">
+        
+ <input  id="u4184_input" type="text" value="{%s Data.Inputs[7].Val %}" title="{%s Data.Inputs[7].Title%}" name="{%s Data.Inputs[7].Nameinput %}" placeholder="{%s Data.Inputs[7].Title%}" />
+ 
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4185" class="ax_default box_2">
+        <div id="u4185_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4186" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4187" class="ax_default box_1">
+        <div id="u4187_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4188" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4189" class="ax_default box_1">
+        <div id="u4189_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4190" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4191" class="ax_default box_1">
+        <div id="u4191_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4192" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Text Field) -->
+      <div id="u4193" class="ax_default text_field" title="Введите Ваш Идентификационный номер налогоплательщика">
+        
+ <input  id="u4193_input" type="text" value="{%s Data.Inputs[8].Val %}" title="{%s Data.Inputs[8].Title%}" name="{%s Data.Inputs[8].Nameinput %}" placeholder="{%s Data.Inputs[8].Title%}" />
+ 
+      </div>
+
+      <!-- Unnamed (Text Field) -->
+      <div id="u4194" class="ax_default text_field" title="Введите Ваше Имя Фамилию Отчество">
+        
+ <input  id="u4194_input" type="text" value="{%s Data.Inputs[9].Val %}" title="{%s Data.Inputs[9].Title%}" name="{%s Data.Inputs[9].Nameinput %}" placeholder="{%s Data.Inputs[9].Title%}" />
+ 
+      </div>
+
+      <!-- Unnamed (Text Field) -->
+      <div id="u4195" class="ax_default text_field" title="Введите полное название Вашей организации">
+        
+ <input  id="u4195_input" type="text" value="{%s Data.Inputs[10].Val %}" title="{%s Data.Inputs[10].Title%}" name="{%s Data.Inputs[10].Nameinput %}" placeholder="{%s Data.Inputs[10].Title%}" />
+ 
+      </div>
+
+      <!-- comission (Dynamic Panel) -->
+      <div id="u4196" class="ax_default" data-label="comission">
+        <div id="u4196_state0" class="panel_state" data-label="State1">
+          <div id="u4196_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (Group) -->
+            <div id="u4197" class="ax_default" data-width="16" data-height="10">
+
+              <!-- Unnamed (Image) -->
+              <div id="u4198" class="ax_default image">
+                <img id="u4198_img" class="img " src="images/physical_person/u1470.png"/>
+                <!-- Unnamed () -->
+                <div id="u4199" class="text" style="display:none; visibility: hidden">
+                  <p><span></span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Group) -->
+            <div id="u4200" class="ax_default" data-width="394" data-height="41">
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u4201" class="ax_default box_1">
+                <div id="u4201_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u4202" class="text">
+                  <p><span>УКАЗАТЬ ПАРТНЕРСКУЮ КОМИССИЮ</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Hot Spot) -->
+            <div id="u4203" class="ax_default">
+            </div>
+          </div>
+        </div>
+        <div id="u4196_state1" class="panel_state" data-label="State2" style="display:none; visibility: hidden;">
+          <div id="u4196_state1_content" class="panel_state_content">
+
+            <!-- Unnamed (Group) -->
+            <div id="u4204" class="ax_default" data-width="16" data-height="10">
+
+              <!-- Unnamed (Image) -->
+              <div id="u4205" class="ax_default image">
+                <img id="u4205_img" class="img " src="images/physical_person/u1470.png"/>
+                <!-- Unnamed () -->
+                <div id="u4206" class="text" style="display:none; visibility: hidden">
+                  <p><span></span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Group) -->
+            <div id="u4207" class="ax_default" data-width="394" data-height="161">
+
+              <!-- Unnamed (Group) -->
+              <div id="u4208" class="ax_default" data-width="394" data-height="161">
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u4209" class="ax_default box_1">
+                  <div id="u4209_div" class=""></div>
+                  <!-- Unnamed () -->
+                  <div id="u4210" class="text">
+                    <p><span>15%</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u4211" class="ax_default box_1">
+                  <div id="u4211_div" class=""></div>
+                  <!-- Unnamed () -->
+                  <div id="u4212" class="text">
+                    <p><span>16%</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u4213" class="ax_default box_1">
+                  <div id="u4213_div" class=""></div>
+                  <!-- Unnamed () -->
+                  <div id="u4214" class="text">
+                    <p><span>17%</span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u4215" class="ax_default box_1">
+                  <div id="u4215_div" class=""></div>
+                  <!-- Unnamed () -->
+                  <div id="u4216" class="text">
+                    <p><span>ОБСУДИТЬ КОМИССИЮ ПОЗЖЕ</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Unnamed (Group) -->
+              <div id="u4217" class="ax_default" data-width="394" data-height="161">
+
+                <!-- Unnamed (Group) -->
+                <div id="u4218" class="ax_default" data-width="0" data-height="0">
+                </div>
+
+                <!-- Unnamed (Horizontal Line) -->
+                <div id="u4219" class="ax_default line">
+                  <img id="u4219_img" class="img " src="images/physical_person/u1484.png"/>
+                  <!-- Unnamed () -->
+                  <div id="u4220" class="text" style="display:none; visibility: hidden">
+                    <p><span></span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Vertical Line) -->
+                <div id="u4221" class="ax_default line">
+                  <img id="u4221_img" class="img " src="images/physical_person/u1523.png"/>
+                  <!-- Unnamed () -->
+                  <div id="u4222" class="text" style="display:none; visibility: hidden">
+                    <p><span></span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Vertical Line) -->
+                <div id="u4223" class="ax_default line">
+                  <img id="u4223_img" class="img " src="images/physical_person/u1523.png"/>
+                  <!-- Unnamed () -->
+                  <div id="u4224" class="text" style="display:none; visibility: hidden">
+                    <p><span></span></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (Horizontal Line) -->
+                <div id="u4225" class="ax_default line">
+                  <img id="u4225_img" class="img " src="images/physical_person/u1484.png"/>
+                  <!-- Unnamed () -->
+                  <div id="u4226" class="text" style="display:none; visibility: hidden">
+                    <p><span></span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Group) -->
+            <div id="u4227" class="ax_default" data-width="394" data-height="41">
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u4228" class="ax_default box_1">
+                <div id="u4228_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u4229" class="text">
+                  <p><span>УКАЗАТЬ ПАРТНЕРСКУЮ КОМИССИЮ</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Hot Spot) -->
+            <div id="u4230" class="ax_default">
+            </div>
+
+            <!-- Unnamed (Hot Spot) -->
+            <div id="u4231" class="ax_default">
+            </div>
+
+            <!-- Unnamed (Hot Spot) -->
+            <div id="u4232" class="ax_default">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endfunc %}

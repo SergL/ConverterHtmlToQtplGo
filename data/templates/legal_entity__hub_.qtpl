@@ -1,0 +1,41 @@
+/* source file: /home/serg/work/site/uvoteam-test/htdocs/../../travel/prototype/Travel_Axure/legal_entity__hub_.html<br>
+{% func (Data *DataHtml) Legal_entity__hub_() %}
+<div id="base" class="">
+
+      <!-- Register (Rectangle) -->
+      <div id="u2532" class="ax_default primary_button ax_default_unplaced" data-label="Register" style="display:none; visibility: hidden">
+        <div id="u2532_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u2533" class="text">
+          <p><span>ПОИСК</span></p>
+        </div>
+      </div>
+
+      <!-- Register (Rectangle) -->
+      <div id="u2534" class="ax_default primary_button ax_default_unplaced" data-label="Register" style="display:none; visibility: hidden">
+        <div id="u2534_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u2535" class="text">
+          <p><span>ДАЛЕЕ</span></p>
+        </div>
+      </div>
+
+      <!-- Register (Rectangle) -->
+      <div id="u2536" class="ax_default primary_button ax_default_unplaced" data-label="Register" style="display:none; visibility: hidden">
+        <div id="u2536_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u2537" class="text">
+          <p><span>ДАЛЕЕ</span></p>
+        </div>
+      </div>
+
+      <!-- Register (Rectangle) -->
+      <div id="u2538" class="ax_default primary_button ax_default_unplaced" data-label="Register" style="display:none; visibility: hidden">
+        <div id="u2538_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u2539" class="text">
+          <p><span>ДАЛЕЕ</span></p>
+        </div>
+      </div>
+    </div>
+{% endfunc %}

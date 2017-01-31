@@ -1,0 +1,72 @@
+/* source file: /home/serg/work/site/uvoteam-test/htdocs/../../travel/prototype/Travel_Axure/frame_-_pass_scan.html<br>
+{% func (Data *DataHtml) Frame___pass_scan() %}
+<div id="base" class="">
+
+      <!-- Unnamed (Group) -->
+      <div id="u1645" class="ax_default" data-width="700" data-height="1976">
+
+        <!-- Unnamed (Image) -->
+        <div id="u1646" class="ax_default image">
+          <img id="u1646_img" class="img " src="images/frame_-_pass_scan/u1646.jpg"/>
+          <!-- Unnamed () -->
+          <div id="u1647" class="text" style="display:none; visibility: hidden">
+            <p><span></span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Image) -->
+        <div id="u1648" class="ax_default image">
+          <img id="u1648_img" class="img " src="images/frame_-_pass_scan/u1648.jpg"/>
+          <!-- Unnamed () -->
+          <div id="u1649" class="text" style="display:none; visibility: hidden">
+            <p><span></span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Image) -->
+        <div id="u1650" class="ax_default image">
+          <img id="u1650_img" class="img " src="images/frame_-_pass_scan/u1650.jpg"/>
+          <!-- Unnamed () -->
+          <div id="u1651" class="text" style="display:none; visibility: hidden">
+            <p><span></span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Image) -->
+        <div id="u1652" class="ax_default image">
+          <img id="u1652_img" class="img " src="images/frame_-_pass_scan/u1652.jpg"/>
+          <!-- Unnamed () -->
+          <div id="u1653" class="text" style="display:none; visibility: hidden">
+            <p><span></span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Image) -->
+        <div id="u1654" class="ax_default image">
+          <img id="u1654_img" class="img " src="images/frame_-_pass_scan/u1654.jpg"/>
+          <!-- Unnamed () -->
+          <div id="u1655" class="text" style="display:none; visibility: hidden">
+            <p><span></span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Image) -->
+        <div id="u1656" class="ax_default image">
+          <img id="u1656_img" class="img " src="images/frame_-_pass_scan/u1656.jpg"/>
+          <!-- Unnamed () -->
+          <div id="u1657" class="text" style="display:none; visibility: hidden">
+            <p><span></span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Image) -->
+        <div id="u1658" class="ax_default image">
+          <img id="u1658_img" class="img " src="images/frame_-_pass_scan/u1658.jpg"/>
+          <!-- Unnamed () -->
+          <div id="u1659" class="text" style="display:none; visibility: hidden">
+            <p><span></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endfunc %}

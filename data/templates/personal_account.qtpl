@@ -1,0 +1,5 @@
+/* source file: /home/serg/work/site/uvoteam-test/htdocs/../../travel/prototype/Travel_Axure/personal_account.html<br>
+{% func (Data *DataHtml) Personal_account() %}
+<div id="base" class="">
+    </div>
+{% endfunc %}

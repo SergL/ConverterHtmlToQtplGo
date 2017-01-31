@@ -1,0 +1,128 @@
+/* source file: /home/serg/work/site/uvoteam-test/htdocs/../../travel/prototype/Travel_Axure/registration_user_tmpl.html<br>
+{% func (Data *DataHtml) Registration_user_tmpl() %}
+<div id="base" class="">
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4463" class="ax_default box_1">
+        <div id="u4463_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4464" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4465" class="ax_default box_1">
+        <div id="u4465_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4466" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4467" class="ax_default box_1">
+        <div id="u4467_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4468" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4469" class="ax_default box_1">
+        <div id="u4469_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4470" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Shape) -->
+      <div id="u4471" class="ax_default icon">
+        <img id="u4471_img" class="img " src="images/registration_user/u4471.png"/>
+        <!-- Unnamed () -->
+        <div id="u4472" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4473" class="ax_default box_1">
+        <img id="u4473_img" class="img " src="images/registration_user/u4473.png"/>
+        <!-- Unnamed () -->
+        <div id="u4474" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Text Field) -->
+      <div id="u4475" class="ax_default text_field" title="Введите Ваше имя">
+        
+ <input  id="u4475_input" type="text" value="{%s Data.Inputs[0].Val %}" title="{%s Data.Inputs[0].Title%}" name="{%s Data.Inputs[0].Nameinput %}" placeholder="{%s Data.Inputs[0].Title%}" />
+ 
+      </div>
+
+      <!-- Unnamed (Text Field) -->
+      <div id="u4476" class="ax_default text_field" title="Введите Ваш email">
+        
+ <input  id="u4476_input" type="email" value="{%s Data.Inputs[1].Val %}" title="{%s Data.Inputs[1].Title%}" name="{%s Data.Inputs[1].Nameinput %}" placeholder="{%s Data.Inputs[1].Title%}" />
+ 
+      </div>
+
+      <!-- Unnamed (Text Field) -->
+      <div id="u4477" class="ax_default text_field" title="Введите Ваш контактный номер">
+        
+ <input  id="u4477_input" type="tel" value="{%s Data.Inputs[2].Val %}" title="{%s Data.Inputs[2].Title%}" name="{%s Data.Inputs[2].Nameinput %}" placeholder="{%s Data.Inputs[2].Title%}" />
+ 
+      </div>
+
+      <!-- Unnamed (Text Field) -->
+      <div id="u4478" class="ax_default text_field" title="Введите Ваш пароль">
+        
+ <input  id="u4478_input" type="password" value="{%s Data.Inputs[3].Val %}" title="{%s Data.Inputs[3].Title%}" name="{%s Data.Inputs[3].Nameinput %}" placeholder="{%s Data.Inputs[3].Title%}" />
+ 
+      </div>
+
+      <!-- Unnamed (Checkbox) -->
+      <div id="u4479" class="ax_default checkbox">
+        <label for="u4479_input">
+          <!-- Unnamed () -->
+          <div id="u4480" class="text">
+            <p><span style="color:#8A8F93;">Я принимаю условия </span><span style="color:#169BD5;">Публичной оферты</span><span>, </span><span style="color:#8A8F93;">и я ознакомился с</span><span> </span><span style="color:#169BD5;">Условиями программы</span><span> </span><span style="color:#169BD5;">&quot;82RU.ru для бизнеса&quot;.</span></p>
+          </div>
+        </label>
+        
+ <input  id="u4479_input" type="checkbox" value="{%s Data.Checkboxs[0].Val %}" name="{%s Data.Checkboxs[0].Name %}" />
+ 
+      </div>
+
+      <!-- Not disabled (Rectangle) -->
+      <div id="u4481" class="ax_default primary_button" data-label="Not disabled">
+        <div id="u4481_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4482" class="text">
+          <p><span>ЗАРЕГИСТРИРОВАТЬСЯ</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u4483" class="ax_default heading_2">
+        <div id="u4483_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u4484" class="text">
+          <p><span>РЕГИСТРАЦИЯ ПАРТНЕРА НА СЕРВИСЕ</span></p>
+        </div>
+      </div>
+
+      <!-- Disabled (Rectangle) -->
+      <div id="u4485" class="ax_default primary_button disabled" data-label="Disabled">
+        <div id="u4485_div" class="disabled"></div>
+        <!-- Unnamed () -->
+        <div id="u4486" class="text">
+          <p><span>ЗАРЕГИСТРИРОВАТЬСЯ</span></p>
+        </div>
+      </div>
+
+    </div>
+{% endfunc %}

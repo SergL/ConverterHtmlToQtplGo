@@ -34,6 +34,7 @@ class TemplaterController extends Controller
     private $outputExt = 'qtpl';
     private $dataExt = 'go';
     private $fileNameCur = '';
+    private $fileGoStruct = 'template_struct';
     private $flagDataInQtpl = true;
     /**
      * @var array -templates
@@ -45,7 +46,8 @@ class TemplaterController extends Controller
 //    "strings"
 //    "fmt"
 //) %}',
-    'import'=>"package templates\n",
+        'package'=>"package templates\n\n",
+    'go_struct'=>"package templates\n",
        'code'=>"\n
 //{% code
     type InputData struct {
@@ -87,6 +89,7 @@ class TemplaterController extends Controller
 \n",
 
         'data_beg' =>"\n
+           package templates\n
          var Data<<filenameBrief>> = DataHtml{\n",
         'tag_struct_beg' =>"    <<tag>>s: []<<tag>>Data{\n",
         'tag_struct_line' =>"          <<tag>>Data{<<strAttrs>>},\n",
@@ -133,6 +136,7 @@ class TemplaterController extends Controller
         'tmpl_sprintf_not_attr_in_struct' => "Not NameAttr in  tag structure ='%s' for attribute='%s'<br>",
         'tmpl_sprintf_error_write_to_file' =>"Error write to file: '%s'<br>",
         'tmpl_sprintf_error_open_file' =>"Error open file: '%s'<br>",
+        'tmpl_sprintf_source_file' =>'/* source file: %s<br>',
 //        'tmpl_textare' => "<<func>>\n <<strTag>> <<val>>",
     ];
     private $flagDataInFile = true;
@@ -268,13 +272,20 @@ class TemplaterController extends Controller
         $this->rootPath = Yii::$app->basePath;
         $filelist = scandir($this->rootPath . $this->sourcePath);
         $fileName = 'individual_enterpreneur.html';
+        $counter = 0;
         foreach ($filelist as $fileName) {
 
             if (preg_match('/.+\.' . $this->sourceExt . '$/', $fileName)) {
+                $counter++;
                 printf($this->getTemplate('tmpl_sprintf_file_head'), $fileName);
                 $this->convertFile($fileName);
+                if ($counter === 1){
 
+                    $dataStruct = $this->getTemplate('go_struct');
+                    $this->writeToFile($this->rootPath . $this->outputPath, $this->fileGoStruct, $this->dataExt, $dataStruct);
+                }
             }
+
         }
 
 //        return $this->render('index');
@@ -290,26 +301,26 @@ class TemplaterController extends Controller
         if (!empty($this->dataTags)) {
             $this->resetObject($this->dataTags);
         }
-        $filenameBrief = str_replace('.' . $this->sourceExt, '', $filename);
-        $this->fileNameCur =  $filenameBrief;
 
         $file_source_path = $this->rootPath . $this->sourcePath . '/' . $filename;
 
-
         if (file_exists($file_source_path)) {
+
 
             $fileContent = file_get_contents($file_source_path);
             $fileContent = $this->removeBOM($fileContent);
+
+            $this->fileNameCur =  $this->getNameForQtpl($filename);
             $dataQtpl = $this->clearContent($fileContent);
             $dataQtpl = $this->convertTags($dataQtpl);
             $dataQtpl = trim($dataQtpl);
-            $qtplBegin = '';
+            $qtplBegin = sprintf($this->getTemplate('tmpl_sprintf_source_file'), $file_source_path );
             $qoDataBegin = '';
-            $qoDataBegin .= $this->getTemplate('import');
+//            $qoDataBegin .=
             $qoDataBegin .= $this->getTemplate('code');
 
             $endfunc = $this->getTemplate('endfunc');
-            $qtplBegin .= $this->getTemplateParam('func_html',['filenameBrief'=>ucfirst($filenameBrief)]);
+            $qtplBegin .= $this->getTemplateParam('func_html',['filenameBrief'=>ucfirst($this->fileNameCur)]);
             if (!empty((array)$this->dataTags)) {
 
 //                $dataFile = json_encode($this->dataTags);
@@ -320,7 +331,7 @@ class TemplaterController extends Controller
 
                     $qoDataBegin .= $this->getStrConvertDataTags();
                     // запись данных для формы в файл
-                    $this->writeToFile($this->rootPath . $this->outputPath, $filenameBrief, $this->dataExt, $qoDataBegin);
+                    $this->writeToFile($this->rootPath . $this->outputPath, $this->fileNameCur, $this->dataExt, $qoDataBegin);
 
 
                 }
@@ -335,7 +346,7 @@ class TemplaterController extends Controller
             $dataQtpl = $qtplBegin . $dataQtpl . $endfunc;
 
             // запись данных для формы в файл
-            $this->writeToFile($this->rootPath . $this->outputPath, $filenameBrief, $this->outputExt, $dataQtpl);
+            $this->writeToFile($this->rootPath . $this->outputPath, $this->fileNameCur, $this->outputExt, $dataQtpl);
 
 
         } else {
@@ -648,6 +659,23 @@ class TemplaterController extends Controller
             $result =false;
             printf( $this->getTemplate('tmpl_sprintf_error_write_to_file') , $fileFullName );
         };
+        return $result;
+    }
+
+    private function getNameForQtpl($filename){
+        $result = str_replace('.' . $this->sourceExt, '', $filename);
+
+        $patterns = [
+            "/[-]/",
+            "/[А-Яа-я ]/"
+
+        ];
+        $replacements = ["_",
+            "_"
+        ];
+
+        $result =  preg_replace($patterns, $replacements, $result);
+        print_r("$result\n<br>");
         return $result;
     }
 }

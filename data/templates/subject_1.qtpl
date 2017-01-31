@@ -1,0 +1,5 @@
+/* source file: /home/serg/work/site/uvoteam-test/htdocs/../../travel/prototype/Travel_Axure/subject_1.html<br>
+{% func (Data *DataHtml) Subject_1() %}
+<div id="base" class="">
+    </div>
+{% endfunc %}

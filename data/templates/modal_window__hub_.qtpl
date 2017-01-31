@@ -1,0 +1,5 @@
+/* source file: /home/serg/work/site/uvoteam-test/htdocs/../../travel/prototype/Travel_Axure/modal_window__hub_.html<br>
+{% func (Data *DataHtml) Modal_window__hub_() %}
+<div id="base" class="">
+    </div>
+{% endfunc %}
