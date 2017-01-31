@@ -18,8 +18,8 @@ class TemplaterController extends Controller
      */
 //    /home/serg/work/site/travel/prototype/Travel_Axure
 //    /home/serg/work/site/uvoteam-test/htdocs
-    private $sourcePath = '/data/scr';
-//    private $sourcePath = '/../../travel/prototype/Travel_Axure';
+//    private $sourcePath = '/data/scr';
+    private $sourcePath = '/../../travel/prototype/Travel_Axure';
     /**
      * @var string -extencion prototype files
      */
@@ -27,67 +27,75 @@ class TemplaterController extends Controller
     /**
      * @var string relative path for convertered files
      */
-    private $outputPath = '/data/qtpl/';
+    private $outputPath = '/data/templates/';
     /**
      * @var string - extencion files convertered
      */
     private $outputExt = 'qtpl';
     private $dataExt = 'go';
+    private $fileNameCur = '';
     private $flagDataInQtpl = true;
     /**
      * @var array -templates
      */
 
     private $templates = [
-        'import' => '{% import (
-    "strings"
-    "fmt"
-) %}',
-       'code'=>"\n{% code
-                    type inputData struct {
-                                name string;
-                                typeinput string;
-                                title string;
-                    }
-                    
-                    type textareaData struct {
-                                name string;
-                                typeinput string;
-                                title string;
-                                value string;
-                    
-                    
-                    }
-                    
-                     
-type checkboxData struct {
-    key         string;
-    val         string;
-    title       string;
-    idx         int; 
-    checked     string;
-    events      string; 
-    dataJson    string;
-}
-    
-type dataHtml struct{
-    checkboxArr []checkboxData;
-    inputArr []inputData;
-    textareaArr []textareaData;
-%}\n",
 
-        'data_beg' =>"
-    if data1 == (dataHtml{}) && data1 ==\"\"{\n
-         data := dataHtml{\n",
+//        'import' => '{% import (
+//    "strings"
+//    "fmt"
+//) %}',
+    'import'=>"package templates\n",
+       'code'=>"\n
+//{% code
+    type InputData struct {
+        Key         string;
+        Nameinput   string;
+        Typeinput   string;
+        Title       string;
+        Val         string;
+        Placeholder string;
+    }
+                    
+    type TextareaData struct {
+        Key         string;
+        Name        string;
+        Typeinput   string;
+        Title       string;
+        Val       string;
+        Placeholder string;
+    }
+
+    type CheckboxData struct {
+        Name        string;
+        Key         string;
+        Typeinput   string;
+        Val         string;
+        Title       string;
+        Idx         int; 
+        Checked     string;
+        Events      string; 
+        DataJson    string;
+    }
+    
+    type DataHtml struct{
+        Checkboxs   []CheckboxData;
+        Inputs      []InputData;
+        Textareas   []TextareaData;
+    }
+//%}
+\n",
+
+        'data_beg' =>"\n
+         var Data<<filenameBrief>> = DataHtml{\n",
         'tag_struct_beg' =>"    <<tag>>s: []<<tag>>Data{\n",
         'tag_struct_line' =>"          <<tag>>Data{<<strAttrs>>},\n",
         'tag_struct_str_attrs' =>' <<attr>>: "<<val>>",',
         'tag_struct_end' =>"    },\n",
 
-        'data_end' =>"}else{
-    data := data1
-}\n",
+        'data_end' =>"}\n",
         'func_empty' => '',
+
         'func_page' => '{% func renderNewPage(name string) %}',
         'imp_func_rendeCheckbox1' => '
 {% func renderCheckBox1(key, val, title string, idx int, checked, events, dataJson string) %}
@@ -100,16 +108,16 @@ type dataHtml struct{
 {% endfunc %}
         ',
 
-        'func_html' => "\n{% func renderHtml(data1 *dataHtml ) %}\n",
+        'func_html' => "\n{% func (Data *DataHtml) <<filenameBrief>>() %}\n",
         'func_form' => '{% func renderNewform(key,  title string, idx int, enctype, method, action, target,  dataJson string) %}',
         'func_input' => '{% func renderNewInput(key, title string, idx int, typeinput, value, dataJson string) %}',
         'func_textarea' => '{% func renderNewTextarea(key, name string, idx int, placeholder, value,  dataJson string) %}',
-        'func_checkbox' => '{%= func (data.<<ind>> * checkboxData) renderCheckBox1(key, val, title string, idx int, checked, events, dataJson string) %}',
+        'func_checkbox' => '{%= func (Data.<<ind>> * checkboxData) renderCheckBox1(key, val, title string, idx int, checked, events, dataJson string) %}',
         'func_radio' => '{% func renderRadioBox(key, val, title string, idx int, checked, events, dataJson string) %}',
 
 
         'str_form' => '<form name="{%s key %}{%s idx %}"  enctype="{%s enctype %}" method="{%s method %}"  action="{%s action %}" target="{%s target %}" {%s dataJson %} >',
-        'str_form' => '</form>',
+        'str_form_end' => '</form>',
         'endfunc' => "\n{% endfunc %}",
 
         'tmpl_tag' => '<<<tag>> <<strAttr>> />',
@@ -118,9 +126,16 @@ type dataHtml struct{
         'tmpl_base_tag' => "<<endfunc>><<func>>\n <<strTag>>\n <<endfunc>><<func_html>>",
         'tmpl_input' => "<<endfunc>><<func>>\n <<strTag>> <<endfunc>><<func_html>>",
         'tmpl_attr' => ' <<attr>>="<<val>>"',
+        // templates in format sprintf
+
+        'tmpl_sprintf_file_head' => "\n<h1>Convert file: '%s'</h1>",
+        'tmpl_sprintf_not_require_attr' => "Not require attribute  in file '%s' for tags '%s'['%s'], attribute '%s'<br>",
+        'tmpl_sprintf_not_attr_in_struct' => "Not NameAttr in  tag structure ='%s' for attribute='%s'<br>",
+        'tmpl_sprintf_error_write_to_file' =>"Error write to file: '%s'<br>",
+        'tmpl_sprintf_error_open_file' =>"Error open file: '%s'<br>",
 //        'tmpl_textare' => "<<func>>\n <<strTag>> <<val>>",
     ];
-    private $flagDataInFile = false;
+    private $flagDataInFile = true;
     /**
      * @var string -root path (from relative folders)
      */
@@ -128,11 +143,38 @@ type dataHtml struct{
     /**
      * @var array required attributes for converted tags
      */
+
+    private $dataNameAttr = array(
+        'input' => array(
+            'name'=>'Nameinput',
+            'value'=>'Val',
+            'title'=>'Title',
+            'type'=>'Typeinput',
+            'id'=>'Key',
+            'placeholder'=>'Placeholder',
+        ),
+
+        'checkbox' => array(
+            'name'=>'Name',
+            'value'=>'Val',
+            'title'=>'Title',
+            'type'=>'Typeinput',
+            'id'=>'Key',
+        ),
+        'textarea' => array(
+            'name'=>'Name',
+            'value'=>'Val',
+            'title'=>'Title',
+            'type'=>'Typeinput',
+            'id'=>'Key',
+        ),
+    );
     private $requiredAttr = array(
         'input' => array(
             'name',
             'value',
             'title',
+            'placeholder',
         ),
         'textarea' => array(
             'name',
@@ -143,6 +185,8 @@ type dataHtml struct{
             'value',
         )
     );
+
+
     /**
      * @var - params attributes from prototype files
      */
@@ -152,12 +196,13 @@ type dataHtml struct{
      */
     private $templNameAttr = array(
         'input' => array(
-            'name' => '{%s data.inputs[<<ind>>].nameinput %}',
-            'value' => '{%s data.inputs[<<ind>>].val %}',
-            'placeholder' => '{%s data.inputs[<<ind>>].placeholder%}',
-            'typeinput' => '{%s data.inputs[<<ind>>].typeinput%}',
-            'title' => '{%s data.inputs[<<ind>>].title%}',
-            'type' => '{%s data.inputs[<<ind>>].typeattr%}',
+            'name' => '{%s Data.Inputs[<<ind>>].Nameinput %}',
+            'value' => '{%s Data.Inputs[<<ind>>].Val %}',
+            'placeholder' => '{%s Data.Inputs[<<ind>>].Title%}',
+//            'placeholder' => '{%s DataInputs[<<ind>>].Placeholder%}',
+            'typeinput' => '{%s DataInputs[<<ind>>].typeinput%}',
+            'title' => '{%s Data.Inputs[<<ind>>].Title%}',
+            'type' => '{%s Data.Inputs[<<ind>>].Typeattr%}',
         ),
 /*
  *     key         string;
@@ -170,16 +215,17 @@ type dataHtml struct{
  */
         'checkbox' => array(
             'id' => '{%s key %}{%d idx %}',
-            'name' => '{%s data.checkboxes[<<ind>>].name %}',
-            'value' => '{%s data.checkboxes[<<ind>>].val %}',
-            'checked' => '{%s data.checkboxes[<<ind>>].checked %}',
-            'id' => '{%s data.checkboxes[<<ind>>].id %}',
-//            'title' => '{%s data.checkboxes[<<ind>>].title%}',
+            'name' => '{%s Data.Checkboxs[<<ind>>].Name %}',
+            'value' => '{%s Data.Checkboxs[<<ind>>].Val %}',
+            'checked' => '{%s Data.Checkboxs[<<ind>>].Checked %}',
+//            'id' => '{%s Data.Checkboxs[<<ind>>].Ket %}'
+            'id' => '{%s Data.Checkboxs[<<ind>>].Key %}',
+//            'title' => '{%s Data.Checkboxs[<<ind>>].title%}',
         ),
         'textarea' => array(
-            'name' => '{%s data.textareas[<<ind>>].name %}',
-            'value' => '{%s data.textareas[<<ind>>].val %}',
-            'placeholder' => '{%s data.textareas[<<ind>>].placeholder %}',
+            'name' => '{%s Data.Textareas[<<ind>>].Name %}',
+            'value' => '{%s Data.Textareas[<<ind>>].Val %}',
+            'placeholder' => '{%s Data.Textareas[<<ind>>].Placeholder %}',
         )
     );
     /**
@@ -222,13 +268,14 @@ type dataHtml struct{
         $this->rootPath = Yii::$app->basePath;
         $filelist = scandir($this->rootPath . $this->sourcePath);
         $fileName = 'individual_enterpreneur.html';
-//        foreach ($filelist as $fileName) {
+        foreach ($filelist as $fileName) {
 
             if (preg_match('/.+\.' . $this->sourceExt . '$/', $fileName)) {
+                printf($this->getTemplate('tmpl_sprintf_file_head'), $fileName);
                 $this->convertFile($fileName);
-                print_r("\n<br / >". $fileName );
+
             }
-//        }
+        }
 
 //        return $this->render('index');
     }
@@ -239,10 +286,13 @@ type dataHtml struct{
      */
     private function convertFile($filename)
     {
+        $result = true;
         if (!empty($this->dataTags)) {
             $this->resetObject($this->dataTags);
         }
         $filenameBrief = str_replace('.' . $this->sourceExt, '', $filename);
+        $this->fileNameCur =  $filenameBrief;
+
         $file_source_path = $this->rootPath . $this->sourcePath . '/' . $filename;
 
 
@@ -250,58 +300,48 @@ type dataHtml struct{
 
             $fileContent = file_get_contents($file_source_path);
             $fileContent = $this->removeBOM($fileContent);
-            $saveData = $this->clearContent($fileContent);
-            $saveData = $this->convertTags($saveData);
-            $saveData = trim($saveData);
+            $dataQtpl = $this->clearContent($fileContent);
+            $dataQtpl = $this->convertTags($dataQtpl);
+            $dataQtpl = trim($dataQtpl);
             $qtplBegin = '';
-            $qtplBegin .= $this->getTemplate('import');
-            $qtplBegin .= $this->getTemplate('code');
+            $qoDataBegin = '';
+            $qoDataBegin .= $this->getTemplate('import');
+            $qoDataBegin .= $this->getTemplate('code');
 
             $endfunc = $this->getTemplate('endfunc');
-            $qtplBegin .= $this->getTemplate('func_html');
+            $qtplBegin .= $this->getTemplateParam('func_html',['filenameBrief'=>ucfirst($filenameBrief)]);
             if (!empty((array)$this->dataTags)) {
 
-//                print_r('<pre>');
-//                print_r($this->dataTags);
-//                print_r('</pre>');
 //                $dataFile = json_encode($this->dataTags);
 ////                $func = $this->getTemplate('func_form');
-////                $saveData = $this->getTemplateParam('tmpl_base', ['func'=>$func, 'strTag'=>$saveData, 'endfunc'=>$endfunc] );
-//                if ($this->flagDataInFile) {
-//                    $file_output_data = $this->rootPath . $this->outputPath . '/'
-//                        . $filenameBrief . '.' . $this->dataExt;
-//
-//                    if (file_put_contents($file_output_data, $dataFile)) {
-//                        chmod($file_output_data, 0777);
-//                    } else {
-//                        $err = 1;
-//                        echo "Не получилось записать файл данных исходника" . $file_output_data;
-//                    };
-//                }
+////                $dataQtpl = $this->getTemplateParam('tmpl_base', ['func'=>$func, 'strTag'=>$dataQtpl, 'endfunc'=>$endfunc] );
+                if ($this->flagDataInFile) {
+
+
+                    $qoDataBegin .= $this->getStrConvertDataTags();
+                    // запись данных для формы в файл
+                    $this->writeToFile($this->rootPath . $this->outputPath, $filenameBrief, $this->dataExt, $qoDataBegin);
+
+
+                }
 //                if ($this->flagDataInQtpl) {
-//                    $saveData = '<!--' . $dataFile . "-->\n" . $saveData;
+//                    $dataQtpl = '<!--' . $dataFile . "-->\n" . $dataQtpl;
 //                }
-                $qtplBegin .= $this->getStrConvertDataTags();
+//;
 
             }
 
 
-            $saveData = $qtplBegin . $saveData . $endfunc;
+            $dataQtpl = $qtplBegin . $dataQtpl . $endfunc;
 
-            $file_output_path = $this->rootPath . $this->outputPath . '/'
-                . $filenameBrief . '.' . $this->outputExt;
-            if (file_put_contents($file_output_path, $saveData)) {
-                chmod($file_output_path, 0777);
-            } else {
-                $err = 1;
-                echo "Не получилось записать cконвертированный файл " . $file_output_path;
-            };
+            // запись данных для формы в файл
+            $this->writeToFile($this->rootPath . $this->outputPath, $filenameBrief, $this->outputExt, $dataQtpl);
 
 
         } else {
-            $err = 1;
-            echo "Не получилось открыть файл " . $file_source_path . '<br>';
+            printf( $this->getTemplate('tmpl_sprintf_error_open_file') , $file_source_path );
         }
+        return $result;
     }
 
     /**
@@ -399,7 +439,6 @@ type dataHtml struct{
     private function getTemplateParam($nametemplate, $params = array())
     {
         $template = $this->templates[$nametemplate];
-
         return $this->getProcessTemplateParam($template, $params);
     }
 
@@ -462,6 +501,8 @@ type dataHtml struct{
 
         $strAttr = '';
         foreach ($attributes as $attribute => $value) {
+            $value = $this->replEmpty($value);
+
             if (in_array($attribute, $this->requiredAttr[$templateName])) {
                 $strAttr .= $this->getStrTmplAttribute('tmpl_attr', $templateName, $attribute, $ind);
                 $usedAttr[] = $attribute;
@@ -471,10 +512,16 @@ type dataHtml struct{
         }
 
         foreach ($this->requiredAttr[$templateName] as $require) {
+
             if (!in_array($require, $usedAttr)) {
                 if (!($tag == 'textarea' && $require == 'value')) {
-                    $this->getStrTmplAttribute('tmpl_attr', $templateName, $require, $ind);
+                    $strAttr .= $this->getStrTmplAttribute('tmpl_attr', $templateName, $require, $ind);
+                    printf($this->getTemplate('tmpl_sprintf_not_require_attr'),
+                        $this->fileNameCur,$templateName, $ind, $require);
+
+                    $attributes[$require] = "";
                 }
+
             }
         }
 
@@ -491,7 +538,7 @@ type dataHtml struct{
         $func_html = $this->getTemplate('func_html');
         $endfunc = $this->getTemplate('endfunc');
         $func = $endfunc = $func_html = '';
-        $this->dataTags->$templateNames[] = $attributes;
+        $this->dataTags->$templateNames[] = $this->saveData($attributes, $templateName);
         $result = $this->getTemplateParam('tmpl_base', [
             'func' => $func,
             'strTag' => $strTag,
@@ -522,14 +569,36 @@ type dataHtml struct{
 
         $strConvert = $this->getProcessTemplateParam($this->templNameAttr[$templateName][$attribute],
                                         array('ind'=> $ind));
+//        $attrName = $this->getAttrName($templateName, $attribute);
         $result = $this->getTemplateParam($templateBase,
                                         array('attr' => $attribute, 'val' => $strConvert));
         return $result;
     }
 
+    private function getAttrName($attribute, $templateName){
+        $result = '';
+        if (!isset($this->dataNameAttr[$templateName][$attribute])){
+            printf($this->getTemplate('tmpl_sprintf_not_attr_in_struct'),
+                $templateName, $attribute);
+            $result = $attribute;
+        } else{
+            $result = $this->dataNameAttr[$templateName][$attribute];
+        }
+
+        return $result;
+    }
+
+    private function saveData($attributes, $templateName){
+        $result =[];
+        foreach ($attributes as $attribute=>$value){
+            $attrName = $this->getAttrName($attribute, $templateName);
+            $result[$attrName] = $this->replEmpty($value);
+        }
+        return $result;
+    }
 /*
  *         'data_beg' =>'{% code
-             data := dataHtml{',
+             data := DataHtml{',
         'tag_struct_beg' =>'<<tag>>s: []<<tag>>Data{',
         'tag_struct_line' =>'<<tag>>Data{<<strAttrs>>},',
         'tag_struct_str_attrs' =>' <<attr>>: "<<val>>",',
@@ -542,22 +611,43 @@ type dataHtml struct{
      * @return string
      */
     private function getStrConvertDataTags(){
-        $result =$this->getTemplate('data_beg');
+        $result =$this->getTemplateParam('data_beg', ['filenameBrief'=>ucfirst($this->fileNameCur)]);
             foreach ($this->dataTags as $tag=>$arr){
-                $result .=$this->getTemplateParam('tag_struct_beg',['tag'=>$tag]);
+                $result .=$this->getTemplateParam('tag_struct_beg',['tag'=>ucfirst($tag)]);
                 foreach ($arr as $datatag){
                     $strAttrs='';
                     foreach ($datatag as $attr=>$val){
                         $strAttrs .= $this->getTemplateParam('tag_struct_str_attrs',['attr'=>$attr,'val'=>$val]);
                     }
-                    $result .= $this->getTemplateParam('tag_struct_line',['tag'=>$tag, 'strAttrs' =>$strAttrs]);
+                    $result .= $this->getTemplateParam('tag_struct_line',['tag'=>ucfirst($tag), 'strAttrs' =>$strAttrs]);
                 }
                 $result .= $this->getTemplate('tag_struct_end');
             }
         $result .= $this->getTemplate('data_end');
-//        print_r('<pre>');
-//        print_r($result);
-//            print_r('</pre>');
+        return $result;
+    }
+
+    private function replEmpty($str){
+        $search =[
+            "\n"
+        ];
+        $replace = [
+          '\n'
+        ];
+        $result = str_replace($search, $replace, $str);
+
+        return $result;
+    }
+
+    private function writeToFile($path, $filename, $fileExt, $data){
+        $result =true;
+        $fileFullName = $path . '/' . $filename . '.' . $fileExt;
+        if (file_put_contents($fileFullName, $data)) {
+            chmod($fileFullName, 0777);
+        } else {
+            $result =false;
+            printf( $this->getTemplate('tmpl_sprintf_error_write_to_file') , $fileFullName );
+        };
         return $result;
     }
 }
