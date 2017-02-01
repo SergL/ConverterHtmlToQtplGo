@@ -20,6 +20,13 @@ class TemplaterController extends Controller
 //    /home/serg/work/site/uvoteam-test/htdocs
 //    private $sourcePath = '/data/scr';
     private $sourcePath = '/../../travel/prototype/Travel_Axure';
+    private $sourcePathHtml = '/data/scr';
+    /**
+     * @var string - дополнительная папка для хранения шаблонов  в зависимости от прототипа
+     * @example private $addPath = '/OBJECT';
+     */
+
+    private $addPath = '';
     /**
      * @var string -extencion prototype files
      */
@@ -27,7 +34,7 @@ class TemplaterController extends Controller
     /**
      * @var string relative path for convertered files
      */
-    private $outputPath = '/data/templates/';
+    private $outputPath = '/data/templates';
     /**
      * @var string - extencion files convertered
      */
@@ -282,7 +289,7 @@ class TemplaterController extends Controller
                 if ($counter === 1){
 
                     $dataStruct = $this->getTemplate('go_struct');
-                    $this->writeToFile($this->rootPath . $this->outputPath, $this->fileGoStruct, $this->dataExt, $dataStruct);
+                    $this->writeToFile($this->rootPath . $this->outputPath . $this->addPath, $this->fileGoStruct, $this->dataExt, $dataStruct);
                 }
             }
 
@@ -331,7 +338,7 @@ class TemplaterController extends Controller
 
                     $qoDataBegin .= $this->getStrConvertDataTags();
                     // запись данных для формы в файл
-                    $this->writeToFile($this->rootPath . $this->outputPath, $this->fileNameCur, $this->dataExt, $qoDataBegin);
+                    $this->writeToFile($this->rootPath . $this->outputPath . $this->addPath, $this->fileNameCur, $this->dataExt, $qoDataBegin);
 
 
                 }
@@ -346,7 +353,7 @@ class TemplaterController extends Controller
             $dataQtpl = $qtplBegin . $dataQtpl . $endfunc;
 
             // запись данных для формы в файл
-            $this->writeToFile($this->rootPath . $this->outputPath, $this->fileNameCur, $this->outputExt, $dataQtpl);
+            $this->writeToFile($this->rootPath . $this->outputPath  . $this->addPath, $this->fileNameCur, $this->outputExt, $dataQtpl);
 
 
         } else {
